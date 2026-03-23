@@ -19,4 +19,12 @@ public class TeacherServices {
     public Teacher createTeacher(Teacher teacher) {
         return teacherRepository.save(teacher);
     }
+
+    //mise à jour un teacher
+    public Teacher updateTeacher(Teacher teacher) {
+        return teacherRepository.save(teacher);
+    }
+
+
+
 }

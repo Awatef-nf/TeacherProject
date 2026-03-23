@@ -4,10 +4,7 @@ package com.teacherApp.controller;
 import com.teacherApp.model.Teacher;
 import com.teacherApp.services.TeacherServices;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("teacher")
@@ -23,5 +20,9 @@ public class TeacherController {
         return teacherServices.createTeacher(teacher);
 
     }
-
+    //modifier un teacher
+    @PostMapping
+    public Teacher updateTeacher(@RequestParam (name = "id") Integer id, @RequestBody Teacher teacher) {
+        return teacherServices.createTeacher(teacher);
+    }
 }
