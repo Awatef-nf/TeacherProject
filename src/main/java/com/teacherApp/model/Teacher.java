@@ -16,6 +16,9 @@ public class Teacher {
     @OneToMany
     private List<ClassRoom> classRooms;
 
+    public Teacher() {
+    }
+
     public Teacher(Integer id) {
         this.id = id;
     }
